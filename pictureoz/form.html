@@ -1,85 +1,127 @@
 <!DOCTYPE html>
 <html lang="pt">
-   <head>
-      <meta charset="utf-8">
-      <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="">
-      <meta name="author" content="">
-      <title>Formulário Picture Oz</title>
+<head>
+  <title>Picture oz</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
 
-      <!-- Css -->
+</head>
+<body>
+  <img src= https://cdn.dribbble.com/users/400493/screenshots/2703191/hello.gif height="400" width="400">
 
-      <link href="css/bootstrap.css" rel="stylesheet">
-      <link href="css/style.css" rel="stylesheet">
-   </head>
-   <body>
-      <nav class="navbar navbar-default color-fill navbar-fixed-top">
-         <div class="col-md-12">
-            <div class="nav">
-               <button class="btn-nav">
-               <span class="icon-bar top"></span>
-               <span class="icon-bar middle"></span>
-               <span class="icon-bar bottom"></span>
-               </button>
-            </div>
-            <a class="navbar-brand" href="index.html">
-            <img class="logo" src="img/logo1.png" alt="logo">
-            </a>
-            <div class="nav-content hideNav hidden">
-               <ul class="nav-list vcenter">
-                 <li class="nav-item"><a class="item-anchor" href="index.html">inicio</a></li>
-                 <li class="nav-item"><a class="item-anchor" href="form.html">Formulário</a></li>
-                 <li class="nav-item"><a class="item-anchor" href="portfolio.html">Portfólio</a></li>
-                 <li class="nav-item"><a class="item-anchor" href="contact.html">Contato</a></li>
-               </ul>
-            </div>
-         </div>
-      </nav>
-<br>
-<br>
-<br>
-<br>
-      <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
-      <script>
+  <br>
 
-       $(document).ready(function(){
+<div class="container">
 
-        $('#meuFormulario').on('submit', function(e){
-                e.preventDefault();
-                var nome = $('#nome').val().length;
-                var senha = $('#senha').val().length;
-                if (nome > 0 && senha > 0) {
-                    localStorage.setItem("nome", $('#nome').val());
-                    localStorage.setItem("senha", $('#senha').val());
-                    this.submit();
-                }else{
-                  alert("Você deve preencher o usuário e senha!")
-                }
+  <!-- Button to Open the Modal -->
+  <button type="button" class="btn btn-primary" data-toggle="modal" data-target="#myModal">
+    Entre no Formulário
+  </button>
+
+
+  <!-- The Modal -->
+  <div class="modal" id="myModal">
+    <div class="modal-dialog">
+      <div class="modal-content">
+
+        <!-- Modal Header -->
+        <div class="modal-header">
+          <h4 class="modal-title">Bem vindo ao formulário da Picture oz</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+
+        <!-- Modal body -->
+        <div class="modal-body">
+          <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+          <script>
+
+           $(document).ready(function(){
+
+            $('#meuFormulario').on('submit', function(e){
+                    e.preventDefault();
+                    var nome = $('#nome').val().length;
+                    var senha = $('#senha').val().length;
+                    if (nome > 0 && senha > 0) {
+                        localStorage.setItem("nome", $('#nome').val());
+                        localStorage.setItem("senha", $('#senha').val());
+                        this.submit();
+                    }else{
+                      alert("Você deve preencher o usuário e senha!")
+                    }
+                });
+
             });
 
-        });
+          </script>
+          </head>
+          <body>
 
-      </script>
-      </head>
-      <body>
+            <h1>Formulário</h1>
+            <form id="meuFormulario" action="pagina2.html">
+            Seu Login:<br>
+            <input type="text" name="nome" value="" id="nome">
+            <br>
+            Sua senha:<br>
+            <input type="password" name="senha" value="" id="senha">
+            <br><br>
+            <br><br>
+            <input type="submit" value="Enviar">
+            <h1> login: lucas123<br>
+                 senha: lucas </h1>
 
-        <h1>Formulário</h1>
-        <form id="meuFormulario" action="pagina2.html">
-        Seu Login:<br>
-        <input type="text" name="nome" value="" id="nome">
-        <br>
-        Sua senha:<br>
-        <input type="password" name="senha" value="" id="senha">
-        <br><br>
-        <br><br>
-        <input type="submit" value="Enviar">
-        </form>
+            </form>
 
-      <!-- script -->
-      <script src="js/jquery.js"></script>
-      <script src="js/bootstrap.min.js"></script>
-      <script src="js/modernizr.js"></script>
-      <script src="js/script.js"></script>
-   </body>
+          <!-- script -->
+          <script src="js/jquery.js"></script>
+          <script src="js/bootstrap.min.js"></script>
+          <script src="js/modernizr.js"></script>
+          <script src="js/script.js"></script>
+       </body>
+     </html>
+
+
+        </div>
+
+        <!-- Modal footer -->
+        <div class="modal-footer">
+          <button type="button" class="btn btn-danger" data-dismiss="modal">Close</button>
+        </div>
+
+      </div>
+    </div>
+  </div>
+
+</div>
+<head>
+
+     <title>Formulário Picture Oz</title>
+     <!-- Css -->
+     <link href="css/bootstrap.css" rel="stylesheet">
+     <link href="css/style.css" rel="stylesheet">
+  </head>
+  <body>
+     <nav class="navbar navbar-default color-fill navbar-fixed-top">
+        <div class="col-md-12">
+           <div class="nav">
+              <button class="btn-nav">
+              <span class="icon-bar top"></span>
+              <span class="icon-bar middle"></span>
+              <span class="icon-bar bottom"></span>
+              </button>
+           </div>
+           <a class="navbar-brand" href="index.html">
+           <img class="logo" src="img/logo1.png" alt="logo">
+           </a>
+           <div class="nav-content hideNav hidden">
+              <ul class="nav-list vcenter">
+                <li class="nav-item"><a class="item-anchor" href="index.html">inicio</a></li>
+                <li class="nav-item"><a class="item-anchor" href="form.html">Formulário</a></li>
+                <li class="nav-item"><a class="item-anchor" href="portfolio.html">Portfólio</a></li>
+                <li class="nav-item"><a class="item-anchor" href="contact.html">Contato</a></li>
+              </ul>
+           </div>
+        </div>
+     </nav>
+</body>
 </html>
