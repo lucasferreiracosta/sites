@@ -1,0 +1,22 @@
+<html>
+<head>
+  <h1><center>Olá <spam id="conteudo1"></spam></center></h1>
+<meta charset="utf-8">
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+<script>
+
+$(document).ready(function(){
+
+          if (localStorage.getItem("nome") == 'Elcio' && localStorage.getItem("senha") =='123') {
+                $('#conteudo1').text('bem vindo, está permitida a sua entrada');
+               }else{
+                 $('#conteudo1').text('está negada a sua entrada, senha ou usuário incorreto');
+               }
+      });
+</script>
+</head>
+
+<body>
+  <p>Olá <spam id="conteudo1"></spam></p>
+</body>
+</html>
