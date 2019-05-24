@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="fr">
+
 <head>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -43,37 +44,36 @@
       </div>
     </div>
   </nav>
-    </head>
+
   <!-- Header -->
   <link rel="stylesheet" href="font.css">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <div class="w3-container w3-center w3-animate-zoom">
 
-
+</head>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
   <link rel="stylesheet" href="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/css/ol.css" type="text/css">
 
-<style>
 
-  .map {
+  <style>
+    .map {
 
-    height: 500px;
+      height: 500px;
 
-    width: 100%;
+      width: 100%;
 
-  }
+    }
+  </style>
 
-</style>
-
-<script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
+  <script src="https://cdn.rawgit.com/openlayers/openlayers.github.io/master/en/v5.3.0/build/ol.js"></script>
   <div class="jumbotron text-center" style="margin-bottom:0">
+    <div class="w3-container w3-center w3-animate-zoom">
 
-    <h1>Projeto Geolocalização</h1>
-  </div>
+      <h1>Projeto Geolocalização</h1>
     </div>
+  </div>
   <div class="container" style="margin-top:30px">
 
     <div class="row">
@@ -88,112 +88,112 @@
         <div id="map" class="map"></div>
         <br><br><br>
 
-<button type="button" id="bt2">Mostre a minha localização</button>
-<p> localização aproximada </p>
+        <button type="button" id="bt2">Mostre a minha localização</button>
+        <p> localização aproximada </p>
 
-   <br>
+        <br>
 
- </div>
+      </div>
 
-</div>
+    </div>
 
-</div>
-
-
-
-
-
-
-<script>
-
-$(document).ready(function() {
-
-
-
- var minhaview = new ol.View({
-
-   center: ol.proj.fromLonLat([-46.5976273,  -23.5519444]),
-
-   zoom: 19
-
- });
-
-
-
- var map = new ol.Map({
-
-   target: 'map',
-
-   layers: [
-
-     new ol.layer.Tile({
-
-       source: new ol.source.OSM()
-
-     })
-
-   ],
-
-   view: minhaview
-
- });
+  </div>
 
 
 
 
 
- $("#bt2").click(function() {
 
-   getLocation();
-
- });
+  <script>
+    $(document).ready(function() {
 
 
 
- function getLocation() {
+      var minhaview = new ol.View({
 
-   if (navigator.geolocation) {
+        center: ol.proj.fromLonLat([-46.5976273, -23.5519444]),
 
-     navigator.geolocation.getCurrentPosition(showPosition);
+        zoom: 19
 
-   } else {
-
-     alert("Geolocation is not supported by this browser.");
-
-   }
-
- }
+      });
 
 
 
- function showPosition(position) {
+      var map = new ol.Map({
 
+        target: 'map',
 
+        layers: [
 
-     minhaview.animate({
+          new ol.layer.Tile({
 
-       center: ol.proj.fromLonLat([ position.coords.longitude, position.coords.latitude,]),
+            source: new ol.source.OSM()
 
-       duration: 6000
+          })
 
-     });
+        ],
 
- }
+        view: minhaview
+
+      });
 
 
 
 
 
-});
+      $("#bt2").click(function() {
 
-</script>
-<script src="js/jquery.js"></script>
-<script src="js/bootstrap.min.js"></script>
-<script src="js/modernizr.js"></script>
-<script src="js/script.js"></script>
+        getLocation();
+
+      });
+
+
+
+      function getLocation() {
+
+        if (navigator.geolocation) {
+
+          navigator.geolocation.getCurrentPosition(showPosition);
+
+        } else {
+
+          alert("Geolocation is not supported by this browser.");
+
+        }
+
+      }
+
+
+
+      function showPosition(position) {
+
+
+
+        minhaview.animate({
+
+          center: ol.proj.fromLonLat([position.coords.longitude, position.coords.latitude, ]),
+
+          duration: 6000
+
+        });
+
+      }
+
+
+
+
+
+    });
+  </script>
+  <script src="js/jquery.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script src="js/modernizr.js"></script>
+  <script src="js/script.js"></script>
 
 </body>
-
+</div>
+</div>
+</div>
 
 
 
