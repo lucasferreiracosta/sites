@@ -516,7 +516,7 @@ a:hover, a:active, a:focus {
 }
 
 .blog-post-des .btn:hover {
-  background: #bfba55;
+  background: black;
   border-color: transparent;
   color: #ffffff;
 }
