@@ -7,7 +7,7 @@
 }
 /* =======================================================
 *
-* 	Template Style 
+* 	Template Style
 *
 * ======================================================= */
 body {
@@ -48,7 +48,7 @@ body {
 }
 
 a {
-  color: #cabcab;
+  color: #000000;
   -webkit-transition: 0.5s;
   -o-transition: 0.5s;
   transition: 0.5s;
