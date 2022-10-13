@@ -1,9 +1,0 @@
-Roxo: #871EFF 
-verde: #a7bd00
-verde claro: #A8D40B
-verde um pouco escuro: #8DC90A
-Laranja: #FE980F
-Laranja claro: #FDB45E
-Rosa: #EB0061
-Preto: #333
-Cinza: #C2C2C1	
